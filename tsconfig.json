@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "lib": [
+      "dom",
+      "es2017"
+    ],
+    "module": "es6",
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "preserveConstEnums": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es6",
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "strictNullChecks": false,
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "declaration": true,
+    "outDir": "build",
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "build"
+  ]
+}
