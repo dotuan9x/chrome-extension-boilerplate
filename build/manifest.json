@@ -15,8 +15,11 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://*.postman.co/*"],
-      "js": ["js/lib/jquery-3.3.1.min.js", "js/content_scripts.js"],
+      "matches": ["https://*/*"],
+      "js": [
+        "js/lib/jquery-3.3.1.min.js",
+        "js/content_scripts.js"
+      ],
       "css": ["css/styles.css"]
     }
   ],
@@ -35,6 +38,6 @@
     "alarms",
     "gcm",
     "storage",
-    "https://*.postman.co/*"
+    "https://*/*"
   ]
 }

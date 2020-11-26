@@ -1,3 +1,5 @@
+import './markdown-beautifier'
+
 const API_TRELLO = 'asasdasda';
 
 class PowerUp {

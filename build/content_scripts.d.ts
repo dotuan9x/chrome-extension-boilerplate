@@ -1,3 +1,4 @@
+import './markdown-beautifier';
 declare class PowerUp {
     private boardId;
     cardId: string;

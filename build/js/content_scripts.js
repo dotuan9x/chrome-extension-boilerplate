@@ -95,6 +95,8 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _markdown_beautifier__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./markdown-beautifier */ "./markdown-beautifier.ts");
+
 const API_TRELLO = 'asasdasda';
 class PowerUp {
     constructor() {
@@ -172,6 +174,44 @@ class PowerUp {
     }
 }
 /* harmony default export */ __webpack_exports__["default"] = (new PowerUp());
+
+
+/***/ }),
+
+/***/ "./markdown-beautifier.ts":
+/*!********************************!*\
+  !*** ./markdown-beautifier.ts ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+class MarkdownBeautifier {
+    constructor() {
+        console.log('Hello world');
+        setInterval(() => {
+            const preTag = document.getElementsByClassName('json');
+            if (preTag) {
+                for (let index = 0; index < preTag.length; index++) {
+                    const tag = preTag[index];
+                    if (tag) {
+                        const formatCharacterData = tag.innerText.replace("“", "\"").replace("”", '\"');
+                        let objData = {};
+                        try {
+                            objData = JSON.parse(formatCharacterData);
+                        }
+                        catch (error) {
+                            objData = {};
+                        }
+                        tag.innerHTML = JSON.stringify(objData, null, 2);
+                    }
+                }
+            }
+        }, 3000);
+    }
+}
+/* harmony default export */ __webpack_exports__["default"] = (new MarkdownBeautifier());
 
 
 /***/ }),
@@ -587,7 +627,7 @@ module.exports = function (it) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var core = module.exports = { version: '2.6.11' };
+var core = module.exports = { version: '2.6.12' };
 if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
@@ -1693,7 +1733,7 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var core = module.exports = { version: '2.6.11' };
+var core = module.exports = { version: '2.6.12' };
 if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
@@ -3697,7 +3737,7 @@ var store = global[SHARED] || (global[SHARED] = {});
 })('versions', []).push({
   version: core.version,
   mode: __webpack_require__(/*! ./_library */ "./node_modules/core-js/modules/_library.js") ? 'pure' : 'global',
-  copyright: '© 2019 Denis Pushkarev (zloirock.ru)'
+  copyright: '© 2020 Denis Pushkarev (zloirock.ru)'
 });
 
 
@@ -10367,7 +10407,7 @@ try {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! @babel/polyfill */"./node_modules/@babel/polyfill/lib/index.js");
-module.exports = __webpack_require__(/*! /Users/tuandv/Developer/CHROME/antalyser-debugger/content_scripts.ts */"./content_scripts.ts");
+module.exports = __webpack_require__(/*! /Users/thinhdnp/Documents/Dev/Freelance/postman-markdown-beautifier/content_scripts.ts */"./content_scripts.ts");
 
 
 /***/ })
