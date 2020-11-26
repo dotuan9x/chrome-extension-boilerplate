@@ -196,7 +196,7 @@ class MarkdownBeautifier {
                 for (let index = 0; index < preTag.length; index++) {
                     const tag = preTag[index];
                     if (tag) {
-                        const formatCharacterData = tag.innerText.replace("“", "\"").replace("”", '\"');
+                        const formatCharacterData = tag.innerText.replace(/“+/g, "\"").replace(/”+/g, '\"');
                         let objData = {};
                         try {
                             objData = JSON.parse(formatCharacterData);

@@ -14,7 +14,7 @@ class MarkdownBeautifier {
                     const tag = preTag[index];
 
                     if (tag) {
-                        const formatCharacterData = (tag as TagElement).innerText.replace("“", "\"").replace("”", '\"')
+                        const formatCharacterData = (tag as TagElement).innerText.replace(/“+/g, "\"").replace(/”+/g, '\"')
                         let objData = {};
 
                         try {
