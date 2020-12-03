@@ -232,6 +232,17 @@ class MarkdownBeautifier {
                     table.className = 'is-table-wrapper';
                 }
             }
+            /**
+             * Handle code
+             */
+            const codes = document.querySelectorAll('td>code');
+            if (codes) {
+                for (let index = 0; index < codes.length; index++) {
+                    const code = codes[index];
+                    code.style.color = '#c7254e';
+                    code.style.background = '#f9f2f4';
+                }
+            }
         }, 3000);
     }
 }

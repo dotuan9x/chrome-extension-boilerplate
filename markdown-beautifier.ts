@@ -57,6 +57,20 @@ class MarkdownBeautifier {
                     (table as any).className = 'is-table-wrapper';
                 }
             }
+
+            /**
+             * Handle code
+             */
+            const codes = document.querySelectorAll('td>code')
+
+            if (codes) {
+                for (let index = 0; index < codes.length; index++) {
+                    const code = codes[index];
+
+                    (code as any).style.color = '#c7254e';
+                    (code as any).style.background = '#f9f2f4';
+                }
+            }
         }, 3000)
     }
 }
